@@ -107,7 +107,7 @@ jaws.Sprite.prototype.setImage =      function(value) {
 jaws.Sprite.prototype.flip =          function()      { this.flipped = this.flipped ? false : true; return this }
 jaws.Sprite.prototype.flipTo =        function(value) { this.flipped = value; return this }
 /** Rotate sprite by value degrees */
-jaws.Sprite.prototype.rotate =        function(value) { this.angle += value; return this }
+jaws.Sprite.prototype.rotate =        function(value) { this.angle = (this.angle + value) % 360; return this }
 /** Force an rotation-angle on sprite */
 jaws.Sprite.prototype.rotateTo =      function(value) { this.angle = value; return this }
 /** Set x/y */
