@@ -265,7 +265,7 @@ jaws.Sprite.prototype.draw = function() {
 
   this.context.save()
   this.context.translate(this.x, this.y)
-  if(this.angle!=0) { jaws.context.rotate(this.angle * Math.PI / 180) }
+  if(this.angle!=0) { this.context.rotate(this.angle * Math.PI / 180) }
   this.flipped && this.context.scale(-1, 1)
   this.context.globalAlpha = this.alpha
   this.context.translate(-this.left_offset, -this.top_offset) // Needs to be separate from above translate call cause of flipped
